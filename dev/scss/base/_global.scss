@@ -123,7 +123,7 @@ section.hero{
 		color: $white;
 		text-transform: uppercase;
 		font-weight: 300;
-		margin-bottom: 5px;
+		margin-bottom: 0;
 	}
 
 	h2{
@@ -140,7 +140,7 @@ section.hero{
 // HOME
 
 section.seperator{
-	background: url(../img/startup_images.jpg) no-repeat left bottom;
+	background: url(../img/startup_images.jpg) no-repeat left top;
 	background-size:cover;
 	ul{
 		display: block;
@@ -220,6 +220,14 @@ section.services{
 }
 
 
+// CONTACT US
+section.contact-map{
+	background: url(../img/caskadia_location.jpg) no-repeat center top;
+	background-size:cover;
+	height: 400px;
+}
+
+
 // FOOTER CALLOUT
 section.footer-callout{
 	background: $light-gray-bg;
@@ -264,19 +272,9 @@ section.footer-callout{
 				}			
 			}
 		}
-
-		// .branding{
-		// 	display: inline-block;
-		// 	float: left;
-		// }
-
-		// .socials{
-		// 	display: inline-block;
-		// 	float: right;
-		// }
 	}
 
-
+ 
 
 
 
