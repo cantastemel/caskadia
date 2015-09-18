@@ -1,4 +1,4 @@
-// Utility Classes
+// UTILITY
 .text-center{
 	text-align: center;
 }
@@ -27,11 +27,11 @@
 	float: right;
 }
 
-
+// COMMON ELEMENTS
 .btn{
 	font-size: 20px;
 	font-weight: 400;
-	padding: 10px 20px;
+	padding: 10px 40px;
 
 	&.btn-white{
 		border: 2px solid $white; 
@@ -60,12 +60,6 @@
 hr{	
 	border: none;
 	border-top: 1px solid #d43e28;
-}
-
-
-section{
-	padding: 80px 0;
-	text-align: center;
 }
 
 
@@ -104,25 +98,190 @@ header{
 	}
 } 
 
-
-// HERO
-
-section.hero{
-	background: url(../img/background_hero_vancouver.jpg) no-repeat left bottom;
-	background-size: cover;
-	color: $white;
+// SECTION - common
+section{
+	padding: 50px 0;
 	text-align: center;
 
 	h1{
+		margin-bottom: 30px;
+		color: $red;
 		text-transform: uppercase;
+	}
+}
+
+
+// HERO
+section.hero{
+	background: url(../img/background_hero_vancouver.jpg) no-repeat left top;
+	background-size: cover;
+	color: $white;
+	text-align: center;
+	padding: 80px 0;
+
+	h1{
+		color: $white;
+		text-transform: uppercase;
+		font-weight: 300;
+		margin-bottom: 5px;
 	}
 
 	h2{
 		text-transform: uppercase;
-		margin-bottom: 50px;
+		margin-bottom: 55px;
 	}
 
 	p{
 		margin-bottom: 60px;
 	}
 }
+
+
+// HOME
+
+section.seperator{
+	background: url(../img/startup_images.jpg) no-repeat left bottom;
+	background-size:cover;
+	ul{
+		display: block;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		@include clearfix;
+		li{
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 50px 0;
+			text-transform: uppercase;
+			color: $white;
+			font-weight: 700;
+			font-size: 22px;
+			width: 25%;
+
+			@include tablet{
+				width: 50%;
+			}
+
+			@include mobile{
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+// OUR SERVICES
+section.services{
+
+	.service-row{
+		padding: 50px 0;
+		border-bottom: 1px solid $footer-gray;
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		@include desktop{
+			&:nth-child(odd){
+				.column-text{
+					float: right;
+				}
+				.column-image{
+
+				}
+			}
+		}
+
+		.column-text{
+			text-align: center;
+			margin-bottom: 50px;
+
+			@include desktop{
+				text-align: left;
+				margin-bottom: 0;
+			}
+
+			h2{
+				text-transform: uppercase;
+				margin-bottom: 15px;
+			}
+		}
+
+		.column-image{
+			text-align: center;
+
+			img{
+				max-width: 375px;
+			}
+		}
+	}
+}
+
+
+// FOOTER CALLOUT
+section.footer-callout{
+	background: $light-gray-bg;
+
+	p{
+		margin-bottom: 40px;
+	}
+}
+
+
+// FOOTER
+	footer{
+		@extend section;
+		background: $footer-gray;
+
+		.footer-utility{
+			margin-bottom: 50px;
+			.branding{
+				display: block;
+				margin-bottom: 30px;
+			}
+			.socials{
+				display: block;
+				margin-bottom: 30px;
+
+				a{
+					padding: 0 10px;
+				}
+			}
+
+			@include tablet{
+				.branding{
+					display: inline-block;
+					float: left;
+					margin-bottom: 0;
+				}
+
+				.socials{
+					display: inline-block;
+					float: right;
+					margin-bottom: 0;
+				}			
+			}
+		}
+
+		// .branding{
+		// 	display: inline-block;
+		// 	float: left;
+		// }
+
+		// .socials{
+		// 	display: inline-block;
+		// 	float: right;
+		// }
+	}
+
+
+
+
+
+
+
+
+
+
