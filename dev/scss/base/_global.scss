@@ -1,0 +1,128 @@
+// Utility Classes
+.text-center{
+	text-align: center;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-red{
+	color: $red;
+}
+
+.text-white{
+	color: $white;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+
+.btn{
+	font-size: 20px;
+	font-weight: 400;
+	padding: 10px 20px;
+
+	&.btn-white{
+		border: 2px solid $white; 
+		color: $white;
+		@include transition(all 0.4s ease-in-out);
+
+		&:hover{
+			background: $white;
+			color: $red;
+		}
+	}
+
+	&.btn-red{
+		border: 2px solid $red;
+		color: $red; 
+		@include transition(all 0.4s ease-in-out);
+
+
+		&:hover{
+			background: $red;
+			color: $white;
+		}
+	}
+}
+
+hr{	
+	border: none;
+	border-top: 1px solid #d43e28;
+}
+
+
+section{
+	padding: 80px 0;
+	text-align: center;
+}
+
+
+// HEADER
+header{
+	padding: 30px 0;
+	.columns{
+
+		.row{
+			@include clearfix;
+		}
+	} 
+
+	.nav{
+
+		ul{
+
+			li{
+				display: inline;
+				vertical-align: middle;
+				line-height: 50px;
+				margin-right: 50px;
+				text-transform: uppercase;
+				&:last-child{
+					margin-right: 0;
+				}
+
+				a{
+
+					&.current{
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+} 
+
+
+// HERO
+
+section.hero{
+	background: url(../img/background_hero_vancouver.jpg) no-repeat left bottom;
+	background-size: cover;
+	color: $white;
+	text-align: center;
+
+	h1{
+		text-transform: uppercase;
+	}
+
+	h2{
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+
+	p{
+		margin-bottom: 60px;
+	}
+}
