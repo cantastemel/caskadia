@@ -29,7 +29,7 @@
 
 // COMMON ELEMENTS
 .btn{
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	padding: 10px 40px;
 	display: inline-block;
@@ -117,6 +117,7 @@ header{
 
 // SECTION - common
 section{
+	position: relative;
 	padding: 50px 0;
 	text-align: center;
 
@@ -156,6 +157,40 @@ section.hero{
 
 section.seperator{
 	background: url(../img/startup_images.jpg) no-repeat left top;
+	background-size:cover;
+	min-height: 233px;
+	ul{
+		display: block;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		@include clearfix;
+		li{
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 50px 0;
+			text-transform: uppercase;
+			color: $white;
+			font-weight: 700;
+			font-size: 22px;
+			float: none;
+			width: 100%;
+
+			@include tablet{
+				width: 50%;
+				float: left;
+			}
+
+			@include desktop{
+				float: left;
+				width: 25%;
+			}
+		}
+	}
+}
+section.seperator-2{
+	background: url(../img/startup_images-2.jpg) no-repeat left top;
 	background-size:cover;
 	min-height: 233px;
 	ul{
@@ -242,7 +277,7 @@ section.services{
 // JOBS
 section.job-listing{
 	text-align: center;
-
+	background: $light-gray-bg;
 	.job-listing-row{
 		margin-bottom: 30px;
 
@@ -251,10 +286,13 @@ section.job-listing{
 		}
 	}
 
+
+
 	.job-listing-single{
 		@include clearfix;
 		padding: 20px;
 		border: 1px solid $footer-gray;
+		background: $white;
 
 		p{
 			color: $mid-gray;
@@ -462,6 +500,30 @@ section.footer-callout{
 		}
 
 		@include mobile{
+			display: block;
+		}
+	}
+
+	.triangle-top{
+		width: 140px;
+		height: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: none;
+		@include desktop{
+			display: block;
+		}
+	}
+
+	.triangle-bottom{
+		width: 140px;
+		height: auto;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: none;
+		@include desktop{
 			display: block;
 		}
 	}
