@@ -32,6 +32,7 @@
 	font-size: 20px;
 	font-weight: 400;
 	padding: 10px 40px;
+	display: inline-block;
 
 	&.btn-white{
 		border: 2px solid $white; 
@@ -73,26 +74,42 @@ header{
 		}
 	} 
 
+	img.logo{
+		@include mobile{
+			width: 200px;
+			height: auto;
+		}
+	} 
+
 	.nav{
+		display: none;
+		@include tablet{
+			display: block;
+			ul{
 
-		ul{
-
-			li{
-				display: inline;
-				vertical-align: middle;
-				line-height: 50px;
-				margin-right: 50px;
-				text-transform: uppercase;
-				&:last-child{
-					margin-right: 0;
-				}
-
-				a{
-
-					&.current{
-						font-weight: bold;
+				li{
+					display: inline;
+					vertical-align: middle;
+					line-height: 50px;
+					margin-right: 20px;
+					text-transform: uppercase;
+					&:last-child{
+						margin-right: 0;
 					}
+
+					a{
+
+						&.current{
+							font-weight: bold;
+						}
+					}
+
 				}
+			}
+		}
+		@include desktop{
+			ul li{
+				margin-right: 50px;
 			}
 		}
 	}
@@ -137,11 +154,10 @@ section.hero{
 }
 
 
-// HOME
-
 section.seperator{
 	background: url(../img/startup_images.jpg) no-repeat left top;
 	background-size:cover;
+	min-height: 233px;
 	ul{
 		display: block;
 		width: 100%;
@@ -157,15 +173,17 @@ section.seperator{
 			color: $white;
 			font-weight: 700;
 			font-size: 22px;
-			width: 25%;
+			float: none;
+			width: 100%;
 
 			@include tablet{
 				width: 50%;
+				float: left;
 			}
 
-			@include mobile{
-				float: none;
-				width: 100%;
+			@include desktop{
+				float: left;
+				width: 25%;
 			}
 		}
 	}
@@ -213,12 +231,136 @@ section.services{
 			text-align: center;
 
 			img{
+				width: 100%;
 				max-width: 375px;
 			}
 		}
 	}
 }
 
+
+// JOBS
+section.job-listing{
+	text-align: center;
+
+	.job-listing-row{
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.job-listing-single{
+		@include clearfix;
+		padding: 20px;
+		border: 1px solid $footer-gray;
+
+		p{
+			color: $mid-gray;
+		}
+	}
+
+	@include desktop{
+		text-align: left;
+		.job-listing-single{
+			
+			p{
+				margin-bottom: 0;
+			}
+		}
+
+		.job-listing-link{
+			text-align: right;
+		}
+	}
+	
+}
+
+
+// TEAM
+section.team-listing{
+	background: $light-gray-bg;
+	.team-listing-row{
+		border-bottom: 1px solid $footer-gray;
+		padding: 30px 0;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.team-listing-headshot{
+		margin-bottom: 30px;
+
+		img{
+			width: 90%;
+			max-width: 230px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	.team-listing-meta{
+		.name{
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+		.title{
+
+		}
+		.email{
+			color: $red;
+			font-weight: 400;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}	
+	}
+	.team-socil-icon{
+		padding-right: 10px;
+	}
+
+	@include tablet{
+		text-align: left;
+		.team-listing-headshot{
+			width: 40%;
+			max-width: 230px;
+			float: left;
+			margin-bottom: 0;
+
+			img{
+				margin-bottom: 0;
+			}
+		}
+		.team-listing-meta{
+			width: 60%;
+			float: left;
+		}
+		.meta-tbl{
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			height: 257px;
+		}
+
+		.meta-cell{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	@include desktop{
+		.team-listing-headshot{
+			width: 25%;
+			max-width: 230px;
+			float: left;
+		}
+		.team-listing-meta{
+			width: 70%;
+			float: left;
+		}
+	}
+}
 
 // CONTACT US
 section.contact-map{
@@ -274,12 +416,52 @@ section.footer-callout{
 		}
 	}
 
- 
+	.mobile-nav-container {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		background: rgba(255, 255, 255, 0.9) none repeat scroll 0% 0%;
+		opacity: 0;
+		visibility: hidden;
+		@include transition(opacity 0.4s ease-in 0s,visibility 0s ease-in 0.4s);
+		z-index: 100;
 
+		&.open{
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.5s;		
+		}
+	}
+	.mobile-nav{
+		text-align: center;
+		position: relative;
+		top: 50%;
+		height: 60%;
+		font-size: 54px;
+		@include transform(translateY(-50%));	
+	}
+	.close-btn{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 10px;
+		top: 25px;
+		overflow: hidden;
+		border: medium none;
+		background: transparent;
+		outline: medium none;
+		z-index: 100;	
+		font-size: 40px;
+		color: $red;
+		display: none;
 
+		&:hover{
+			cursor: pointer;
+		}
 
-
-
-
-
-
+		@include mobile{
+			display: block;
+		}
+	}
