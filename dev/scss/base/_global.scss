@@ -319,12 +319,13 @@ section.job-listing{
 // TEAM
 section.team-listing{
 	background: $light-gray-bg;
-	.team-listing-row{
-		border-bottom: 1px solid $footer-gray;
-		padding: 30px 0;
-
-		&:last-child{
-			margin-bottom: 0;
+	.team-listing-rows-contaner{
+		.team-listing-row{
+			border-bottom: 1px solid $footer-gray;
+			padding: 30px 0;
+		}
+		.team-listing-row:last-child{
+			border-bottom: 0;
 		}
 	}
 
@@ -354,12 +355,14 @@ section.team-listing{
 			margin-bottom: 20px;
 		}	
 	}
-	.team-socil-icon{
+
+	.team-social-icon{
 		padding-right: 10px;
 	}
 
 	@include tablet{
 		text-align: left;
+
 		.team-listing-headshot{
 			width: 40%;
 			max-width: 230px;
@@ -370,10 +373,12 @@ section.team-listing{
 				margin-bottom: 0;
 			}
 		}
+
 		.team-listing-meta{
 			width: 60%;
 			float: left;
 		}
+
 		.meta-tbl{
 			display: table;
 			table-layout: fixed;
@@ -388,11 +393,13 @@ section.team-listing{
 	}
 
 	@include desktop{
+
 		.team-listing-headshot{
 			width: 25%;
 			max-width: 230px;
 			float: left;
 		}
+
 		.team-listing-meta{
 			width: 70%;
 			float: left;
