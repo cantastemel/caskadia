@@ -27,6 +27,10 @@
 	float: right;
 }
 
+.mb-40{ 
+	margin-bottom: 40px;
+}
+
 // COMMON ELEMENTS
 .btn{
 	font-size: 18px;
@@ -283,6 +287,10 @@ section.job-listing{
 
 		&:last-child{
 			margin-bottom: 0;
+		}
+
+		a{
+			padding: 15px 40px;
 		}
 	}
 
