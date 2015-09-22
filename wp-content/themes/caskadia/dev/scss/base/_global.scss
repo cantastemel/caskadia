@@ -1,0 +1,536 @@
+// UTILITY
+.text-center{
+	text-align: center;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-red{
+	color: $red;
+}
+
+.text-white{
+	color: $white;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+// COMMON ELEMENTS
+.btn{
+	font-size: 18px;
+	font-weight: 400;
+	padding: 10px 40px;
+	display: inline-block;
+
+	&.btn-white{
+		border: 2px solid $white; 
+		color: $white;
+		@include transition(all 0.4s ease-in-out);
+
+		&:hover{
+			background: $white;
+			color: $red;
+		}
+	}
+
+	&.btn-red{
+		border: 2px solid $red;
+		color: $red; 
+		@include transition(all 0.4s ease-in-out);
+
+
+		&:hover{
+			background: $red;
+			color: $white;
+		}
+	}
+}
+
+hr{	
+	border: none;
+	border-top: 1px solid #d43e28;
+}
+
+
+// HEADER
+header{
+	padding: 30px 0;
+	.columns{
+
+		.row{
+			@include clearfix;
+		}
+	} 
+
+	img.logo{
+		@include mobile{
+			width: 200px;
+			height: auto;
+		}
+	} 
+
+	.nav{
+		display: none;
+		@include tablet{
+			display: block;
+			ul{
+
+				li{
+					display: inline;
+					vertical-align: middle;
+					line-height: 50px;
+					margin-right: 20px;
+					text-transform: uppercase;
+					&:last-child{
+						margin-right: 0;
+					}
+
+					a{
+
+						&.current{
+							font-weight: bold;
+						}
+					}
+
+				}
+			}
+		}
+		@include desktop{
+			ul li{
+				margin-right: 50px;
+			}
+		}
+	}
+} 
+
+// SECTION - common
+section{
+	position: relative;
+	padding: 50px 0;
+	text-align: center;
+
+	h1{
+		margin-bottom: 30px;
+		color: $red;
+		text-transform: uppercase;
+	}
+}
+
+
+// HERO
+section.hero{
+	background: url(../img/background_hero_vancouver.jpg) no-repeat left top;
+	background-size: cover;
+	color: $white;
+	text-align: center;
+	padding: 80px 0;
+
+	h1{
+		color: $white;
+		text-transform: uppercase;
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+
+	h2{
+		text-transform: uppercase;
+		margin-bottom: 55px;
+	}
+
+	p{
+		margin-bottom: 60px;
+	}
+}
+
+
+section.seperator{
+	background: url(../img/startup_images.jpg) no-repeat left top;
+	background-size:cover;
+	min-height: 233px;
+	ul{
+		display: block;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		@include clearfix;
+		li{
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 50px 0;
+			text-transform: uppercase;
+			color: $white;
+			font-weight: 700;
+			font-size: 22px;
+			float: none;
+			width: 100%;
+
+			@include tablet{
+				width: 50%;
+				float: left;
+			}
+
+			@include desktop{
+				float: left;
+				width: 25%;
+			}
+		}
+	}
+}
+section.seperator-2{
+	background: url(../img/startup_images-2.jpg) no-repeat left top;
+	background-size:cover;
+	min-height: 233px;
+	ul{
+		display: block;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		@include clearfix;
+		li{
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 50px 0;
+			text-transform: uppercase;
+			color: $white;
+			font-weight: 700;
+			font-size: 22px;
+			float: none;
+			width: 100%;
+
+			@include tablet{
+				width: 50%;
+				float: left;
+			}
+
+			@include desktop{
+				float: left;
+				width: 25%;
+			}
+		}
+	}
+}
+
+
+// OUR SERVICES
+section.services{
+
+	.service-row{
+		padding: 50px 0;
+		border-bottom: 1px solid $footer-gray;
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		@include desktop{
+			&:nth-child(odd){
+				.column-text{
+					float: right;
+				}
+				.column-image{
+
+				}
+			}
+		}
+
+		.column-text{
+			text-align: center;
+			margin-bottom: 50px;
+
+			@include desktop{
+				text-align: left;
+				margin-bottom: 0;
+			}
+
+			h2{
+				text-transform: uppercase;
+				margin-bottom: 15px;
+			}
+		}
+
+		.column-image{
+			text-align: center;
+
+			img{
+				width: 100%;
+				max-width: 375px;
+			}
+		}
+	}
+}
+
+
+// JOBS
+section.job-listing{
+	text-align: center;
+	background: $light-gray-bg;
+	.job-listing-row{
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+
+
+	.job-listing-single{
+		@include clearfix;
+		padding: 20px;
+		border: 1px solid $footer-gray;
+		background: $white;
+
+		p{
+			color: $mid-gray;
+		}
+	}
+
+	@include desktop{
+		text-align: left;
+		.job-listing-single{
+			
+			p{
+				margin-bottom: 0;
+			}
+		}
+
+		.job-listing-link{
+			text-align: right;
+		}
+	}
+	
+}
+
+
+// TEAM
+section.team-listing{
+	background: $light-gray-bg;
+	.team-listing-rows-contaner{
+		.team-listing-row{
+			border-bottom: 1px solid $footer-gray;
+			padding: 30px 0;
+		}
+		.team-listing-row:last-child{
+			border-bottom: 0;
+		}
+	}
+
+	.team-listing-headshot{
+		margin-bottom: 30px;
+
+		img{
+			width: 90%;
+			max-width: 230px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	.team-listing-meta{
+		.name{
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+		.title{
+
+		}
+		.email{
+			color: $red;
+			font-weight: 400;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}	
+	}
+
+	.team-social-icon{
+		padding-right: 10px;
+	}
+
+	@include tablet{
+		text-align: left;
+
+		.team-listing-headshot{
+			width: 40%;
+			max-width: 230px;
+			float: left;
+			margin-bottom: 0;
+
+			img{
+				margin-bottom: 0;
+			}
+		}
+
+		.team-listing-meta{
+			width: 60%;
+			float: left;
+		}
+
+		.meta-tbl{
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			height: 257px;
+		}
+
+		.meta-cell{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	@include desktop{
+
+		.team-listing-headshot{
+			width: 25%;
+			max-width: 230px;
+			float: left;
+		}
+
+		.team-listing-meta{
+			width: 70%;
+			float: left;
+		}
+	}
+}
+
+// CONTACT US
+section.contact-map{
+	background: url(../img/caskadia_location.jpg) no-repeat center top;
+	background-size:cover;
+	height: 400px;
+}
+
+
+// FOOTER CALLOUT
+section.footer-callout{
+	background: $light-gray-bg;
+
+	p{
+		margin-bottom: 40px;
+	}
+}
+
+
+// FOOTER
+	footer{
+		@extend section;
+		background: $footer-gray;
+
+		.footer-utility{
+			margin-bottom: 50px;
+			.branding{
+				display: block;
+				margin-bottom: 30px;
+			}
+			.socials{
+				display: block;
+				margin-bottom: 30px;
+
+				a{
+					padding: 0 10px;
+				}
+			}
+
+			@include tablet{
+				.branding{
+					display: inline-block;
+					float: left;
+					margin-bottom: 0;
+				}
+
+				.socials{
+					display: inline-block;
+					float: right;
+					margin-bottom: 0;
+				}			
+			}
+		}
+	}
+
+	.mobile-nav-container {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		background: rgba(255, 255, 255, 0.9) none repeat scroll 0% 0%;
+		opacity: 0;
+		visibility: hidden;
+		@include transition(opacity 0.4s ease-in 0s,visibility 0s ease-in 0.4s);
+		z-index: 100;
+
+		&.open{
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.5s;		
+		}
+	}
+	.mobile-nav{
+		text-align: center;
+		position: relative;
+		top: 50%;
+		height: 60%;
+		font-size: 54px;
+		@include transform(translateY(-50%));	
+	}
+	.close-btn{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 10px;
+		top: 25px;
+		overflow: hidden;
+		border: medium none;
+		background: transparent;
+		outline: medium none;
+		z-index: 100;	
+		font-size: 40px;
+		color: $red;
+		display: none;
+
+		&:hover{
+			cursor: pointer;
+		}
+
+		@include mobile{
+			display: block;
+		}
+	}
+
+	.triangle-top{
+		width: 140px;
+		height: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: none;
+		@include desktop{
+			display: block;
+		}
+	}
+
+	.triangle-bottom{
+		width: 140px;
+		height: auto;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: none;
+		@include desktop{
+			display: block;
+		}
+	}
