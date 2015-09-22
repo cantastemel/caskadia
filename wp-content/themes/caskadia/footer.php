@@ -7,7 +7,7 @@
                     </div>
                     <div class="socials">
                         <a href="http://www.linkedin.com/company/caskadia-technology-labs" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/img/linkedin_icon.png" width="50" height="50" alt="Caskadia Linkedin"></a>
-                        <a href="mailto:info@caskadia.com" target="_blank"><img src="assets/img/email_icon.png" width="50" height="50" alt="Caskadia Email"></a>
+                        <a href="mailto:info@caskadia.com" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/img/email_icon.png" width="50" height="50" alt="Caskadia Email"></a>
                     </div>
                 </div>
             </div>

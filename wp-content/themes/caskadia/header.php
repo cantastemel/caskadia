@@ -25,7 +25,6 @@
     <body>
         <button class="close-btn"><i class="fi-list"></i></button>
     <div class="mobile-nav-container">
-        
         <nav class="mobile-nav">
             <ul>
                 <li><a href="/" class="current">Home</a></li>
@@ -43,12 +42,7 @@
                         <a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/img/caskadia_logo.png" class="logo" alt="Caskadia" width="248" height="50"></a>
                     </div>
                     <nav class="nav main-nav right">
-                        <ul>
-                            <li><a href="index.html" class="current">Home</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="jobs.html">Jobs</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
-                        </ul>
+                        <?php wp_nav_menu( array('menu' => 'Main nav' )); ?>
                     </nav>
                 </div>
             </div>

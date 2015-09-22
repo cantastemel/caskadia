@@ -96,14 +96,12 @@ header{
 					&:last-child{
 						margin-right: 0;
 					}
+					&.current-menu-item{
 
-					a{
-
-						&.current{
+						a{
 							font-weight: bold;
-						}
+						}	
 					}
-
 				}
 			}
 		}
