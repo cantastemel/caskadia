@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" <?php language_attributes(); ?>>
     <head>
         <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <meta charset="utf-8">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Caskadia Labs</title>
-        <meta name="description" content="Caskadia Labs is a one-stop services provider for fast growing technology companies to set up Research & Development offices in Canada.">
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/main.css">
+        <title><?php wp_title(); ?></title>
+        <?php wp_head(); ?>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
           ga('create', 'UA-67863715-1', 'auto');
           ga('send', 'pageview');
-
         </script>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
         <button class="close-btn"><i class="fi-list"></i></button>
     <div class="mobile-nav-container">
         <nav class="mobile-nav">

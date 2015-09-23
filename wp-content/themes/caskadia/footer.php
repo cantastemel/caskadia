@@ -13,15 +13,12 @@
             </div>
             <div class="row" class="copyright">
                 <div class="large-12 columns">
-                    <div>&copy; Copyright 2015 Caskadia Labs. All Rights Reserved.</div>
+                    <div>&copy; Copyright <?php echo date('Y'); ?> Caskadia Labs. All Rights Reserved.</div>
                     <div>Website created by <a href="http://www.visuallime.com" title="Visual Lime">Visual Lime</a></div>
                 </div>
             </div>
         </footer>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script>
     </div> <!-- /page-container -->
+    <?php wp_footer(); ?>
     </body>
 </html>

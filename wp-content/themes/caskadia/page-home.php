@@ -3,23 +3,42 @@
 Template Name: Homepage
 */
 ?>
-<?php get_header(); ?>
-<section class="hero">
-    <div class="row">
-        <div class="medium-12 large-10 large-centered columns">
-            <h1><?php echo the_field('masthead_title'); ?></h1>
-            <h2><?php echo the_field('masthead_sub_title');?></h2>
-            <?php echo the_field('masthead_body'); ?>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="row">
-        <div class="medium-12 large-10 large-centered columns">
-            <?php echo the_field('below_masthead'); ?>
-        </div>
-    </div>
-</section>
+<?php get_header(); 
+
+if( have_rows('modular_content') ):
+    while ( have_rows('modular_content') ) : the_row();
+
+        if ( get_row_layout() == 'masthead_block' ){ ?>
+            <section class="hero">
+                <div class="row">
+                    <div class="medium-12 large-10 large-centered columns">
+                    <?php if(get_sub_field( "masthead_title" )!= "") { ?>
+                        <h1><?php the_sub_field('masthead_title'); ?></h1>
+                    <?php } ?>
+                    <?php if(get_sub_field( "masthead_sub_title" ) != ""){ ?>
+                        <h2><?php the_sub_field('masthead_sub_title');?></h2>
+                    <?php } ?>
+                    <?php if(get_sub_field( "masthead_body") != ""){ ?>    
+                        <?php the_sub_field('masthead_body'); ?>
+                    <?php } ?>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
+
+        <?php if (get_row_layout() == 'text_block' ){ ?>
+            <section>
+                <div class="row">
+                    <div class="medium-12 large-10 large-centered columns">
+                        <?php the_sub_field('text_area'); ?>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
+
+    <?php endwhile; ?>
+<?php endif; ?>
+
 <?php if( have_rows('seperator_block') ): ?>
 <section class="seperator">
     <div class="row">
