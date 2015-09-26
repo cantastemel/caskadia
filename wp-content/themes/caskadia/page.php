@@ -1,8 +1,3 @@
-<?php
-/*
-Template Name: Contact us
-*/
-?>
 
 <?php get_header(); ?>
 
@@ -24,16 +19,4 @@ Template Name: Contact us
 
 <?php include 'modular-content-block.php' ?>
 
-<section class="contact-map">
-    <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiXBQRD-gwAJWnvcXIc5Fm8x4ISxha6kg&callback=initMap"></script>
-</section>
-<section>
-    <div class="row">
-        <div class="medium-12 large-10 large-centered columns">
-            <?php the_field('below_the_map'); ?>
-        </div>
-    </div>
-    <img src="<?php bloginfo('template_url'); ?>/assets/img/triangles_bottom.png" class="triangle-bottom">
-</section>
 <?php get_footer(); ?>

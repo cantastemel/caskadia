@@ -9,6 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/assets/img/favicon.png">
         <title><?php wp_title(); ?></title>
         <?php wp_head(); ?>
         <script>
@@ -37,7 +38,7 @@
             <div class="row">
                 <div class="large-12 columns">
                     <div class="branding left">
-                        <a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/img/caskadia_logo.png" class="logo" alt="Caskadia" width="248" height="50"></a>
+                        <a href="<?php get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/caskadia_logo.png" class="logo" alt="Caskadia" width="248" height="50"></a>
                     </div>
                     <nav class="nav main-nav right">
                         <?php wp_nav_menu( array('menu' => 'Main nav' )); ?>
