@@ -26,7 +26,6 @@ Template Name: Contact us
 
 <section class="contact-map">
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiXBQRD-gwAJWnvcXIc5Fm8x4ISxha6kg&callback=initMap"></script>
 </section>
 <section>
     <div class="row">

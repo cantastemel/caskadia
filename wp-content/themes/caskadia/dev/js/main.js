@@ -17,7 +17,7 @@ $(function() {
 		}
 	});
 });
-var map;
+    var map;
 	function initMap() {
         var center = {lat: 49.266607, lng: -123.084562};
         var styles = [
@@ -218,7 +218,7 @@ var map;
                 position: center,
                 animation: google.maps.Animation.DROP,
                 map: map,
-                icon: 'http://www.caskadia.com/assets/img/icon.png',
+                icon: 'http://www.caskadia.com/wp-content/themes/caskadia/assets/img/icon.png',
             });
 
 			marker.addListener('click', function() {

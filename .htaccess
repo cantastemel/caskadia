@@ -1,12 +1,14 @@
-
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /caskadia/
+RewriteBase /
+
+RewriteRule index.html http://www.caskadia.com/ [R=301,L]
+RewriteRule jobs.html http://www.caskadia.com/jobs [R=301,L]
+RewriteRule contact-us.html http://www.caskadia.com/contact-us [R=301,L]
+RewriteRule team.html http://www.caskadia.com/team [R=301,L]
+
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /caskadia/index.php [L]
-</IfModule>
+RewriteRule . /index.php [L]
 
 # END WordPress
