@@ -231,7 +231,12 @@ section.seperator-2{
 
 // OUR SERVICES
 section.services{
-
+	.services-gray-banner{
+		padding: 50px 0;
+		margin: 50px auto;
+		background: $light-gray-bg;
+	}
+	
 	.service-row{
 		padding: 50px 0;
 		border-bottom: 1px solid $footer-gray;
