@@ -26,9 +26,21 @@ Template Name: Homepage
 <section class="services" id="services">
     <img src="<?php bloginfo('template_url'); ?>/assets/img/triangles_top.png" class="triangle-top">
     <div class="row">
-        <div class="medium-12 large-12 columns">
-            <h1><?php echo the_field('services_section_title'); ?></h1>
-            <img src="<?php echo the_field('services_section_image'); ?>" alt="" class="mb-40">
+        <div class="medium-10 medium-centered large-8 columns">
+            <h1 class="services_section_title"><?php echo the_field('services_section_title'); ?></h1>
+            <div class="services_section_copy">
+                <?php echo the_field('services_section_copy'); ?>
+            </div>
+        </div>
+    </div>
+    <div class="services-gray-banner">
+        <div class="row">
+            <div class="medium-10 medium-centered large-8 columns">
+                <h2><?php echo the_field('services_banner_title'); ?></h2>
+                <div>
+                    <?php echo the_field('services_banner_copy'); ?>
+                </div>
+            </div>
         </div>
     </div>
 <?php if( have_rows('services') ): ?>
