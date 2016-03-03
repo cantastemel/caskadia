@@ -4,6 +4,7 @@ tmp
 .sass-cache
 *.css.map
 
+<<<<<<< HEAD
 *~
 .DS_Store
 .svn
@@ -12,6 +13,8 @@ tmp
 *.swp
 Thumbs.db
 
+=======
+>>>>>>> master
 # wordpress specific
 wp-config.php
 wp-content/uploads/
@@ -21,4 +24,8 @@ wp-content/backup-db/*
 wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/cache/*
+<<<<<<< HEAD
 wp-content/cache/supercache/*
+=======
+wp-content/cache/supercache/*
+>>>>>>> master

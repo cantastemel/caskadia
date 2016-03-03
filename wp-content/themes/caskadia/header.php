@@ -25,7 +25,12 @@
         <button class="close-btn"><i class="fi-list"></i></button>
     <div class="mobile-nav-container">
         <nav class="mobile-nav">
-            <?php wp_nav_menu( array('menu' => 'Main nav' )); ?>
+            <ul>
+                <li><a href="/" class="current">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
         </nav>
     </div>
     <div id="contentarea">
